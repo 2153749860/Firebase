@@ -18,16 +18,14 @@ db.settings({
   timestampsInSnapshots: true
 });
 
-function addTask(task, callback) {
+function addTask(task) {
 
   db.collection(collection)
               .add(task)
               .then(function(docRef){
                 console.log("Success - Task Id", docRef.id);
-                callback(docRef.id);
               }).catch(function (error) {
                 console.log("Error", error);
-                callback(false, error);
               })
 
 
