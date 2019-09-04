@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Todo List Firebase</title>
-  </head>
-  <body>
-    <div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Todo List Firebase</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
       <h1>Todo List </h1>
-      <input id="newTask">
-      <button onclick=createTask()>Add </button>
+    </header>
+    <div class="main">
+      <div id="task">
+
+        <input id="newTask">
+        <button onclick=createTask()>Add </button>
+      </div>
+
+      <div id="list">
+
+      </div>
     </div>
+    <footer class="footer">
+      <a href="https://github.com/2153749860">My GitHub</a>
+      <a
+        href="https://console.firebase.google.com/u/0/project/todo-list-55283/database/firestore/data~2Ftodo~2FWh6pnDLR6x4qKISIv5Au">Firebase</a>
+    </footer>
+  </div>
+</body>
 
-    <div id="list"> 
+<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+<script src="todoFir.js"></script>
+<script src="todo.js">
 
+</script>
 
-    </div>
-  </body>
-
-  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
-  <script src="todoFir.js"></script>
-  <script src="todo.js">
-
-  </script>
 </html>
