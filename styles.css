@@ -18,7 +18,47 @@ html, body {
     "footer"
 }
 
-.header{
-  
+header{
+  height: 100%;
+  background-color: rgb(255, 77, 35);
+  border-bottom: 2px solid;
+  grid-area: header;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
 }
+
+.main{
+  height: 100%;
+  display: grid;
+  grid-template: 5vh 95vh;
+  grid-area: main;
+
+  justify-content: center;
+  align-content: center;
+
+  color: black;
+}
+
+footer{
+  height:100%;
+  grid-area: footer;
+}
+
+#task{
+  justify-self: center;
+  align-self: center;
+}
+
+#list{
+  justify-self: center;
+  align-self: start;
+  margin-top: 30px;
+}
+
+
+
 
