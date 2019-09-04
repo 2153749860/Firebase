@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html, body {
@@ -75,6 +75,15 @@ button{
   text-decoration: none;
   border-radius: 4px;
   border-color: black;
+}
+
+ul{
+  list-style-type: none;
+
+}
+
+li{
+
 }
 
 
