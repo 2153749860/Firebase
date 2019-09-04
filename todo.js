@@ -1,29 +1,54 @@
-let task =[];
+let tasks = [];
 
-function idGenerator() {
-  let timeStamp = new Date();
+function idGenerator(){
+  let timestamp = new Date();
 
-  let id = timestamp.getHours().toString +
-        timestamp.getMinutes().toString +
-        timestamp.getSeconds().toString +
-        timestamp.getMilliseconds().toString;
+  let id = timestamp.getHours().toString()+
+  timestamp.getMinutes().toString()+
+  timestamp.getSeconds().toString()+
+  timestamp.getMilliseconds().toString();
 
-  
   return id;
-
 }
 
-function createTask() {
-  let taskdesc = document.getElementById("newTask");
+function createTask(){
+
+  let taskdesc = document.getElementById("newTask").value;
 
   let task = {
     id: idGenerator(),
-    data: {
-      desc:taskdesc
+    data:{
+      desc: taskdesc
     }
   }
 
-  task.push(task)
+  //tasks.push(task);
+
+  //updateScreen();
+  addTask(task);
+}
+
+function updateScreen(){
+  let list = "<ul>";
+
+  console.log(tasks);
+
+  tasks.forEach(task=>{
+    list= list+ "<li>" + task.data.desc +"</li>"
+  });
+  list = list + "</ul>";
+
+  document.getElementById("list").innerHTML = list;
+  document.getElementById("newTask").value = "";
+}
+
+dataWasUpdated( function(snapshot){
+
+  tasks=[];
+
+  snapshot.forEach((doc) => {
+    tasks.push(doc.data());
+  })
 
   updateScreen();
-}
+})
