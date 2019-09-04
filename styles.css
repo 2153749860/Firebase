@@ -21,7 +21,7 @@ html, body {
 header{
   height: 100%;
   background-color: rgb(255, 77, 35);
-  border-bottom: 2px solid;
+  border-bottom: 2px solid black;
   grid-area: header;
 
   display: flex;
